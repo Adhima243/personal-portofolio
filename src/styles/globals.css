@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #111111;
+  --card: #181818;
+  --border: #2a2a2a;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-glow: #a855f7;
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: 'Inter', ui-sans-serif, system-ui;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.15), transparent 35%),
+    radial-gradient(circle at 85% 10%, rgba(168, 85, 247, 0.2), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(59, 130, 246, 0.12), transparent 45%),
+    linear-gradient(180deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.95));
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Outfit', ui-sans-serif, system-ui;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .section-wrap {
+    @apply relative py-20 sm:py-24 lg:py-28;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-16;
+  }
+
+  .glass-card {
+    background: rgba(24, 24, 24, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.35), 0 0 30px rgba(139, 92, 246, 0.25);
+  }
+
+  .section-title {
+    @apply text-sm uppercase tracking-[0.3em] text-base-muted/80;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #8b5cf6, #d946ef, #6366f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition-all duration-300;
+    background: linear-gradient(90deg, #8b5cf6, #d946ef, #6366f1);
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.35);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/80 transition-all duration-300 hover:text-white hover:border-white/35;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/70;
+  }
+
+  .stack-item {
+    @apply flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-5 py-6 text-center transition-all duration-300 hover:border-white/30 hover:bg-white/10;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition-all focus:border-white/40;
+  }
+
+  .nav-blur {
+    backdrop-filter: blur(18px);
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .magnetic {
+    transform: translate(var(--magnetic-x, 0px), var(--magnetic-y, 0px));
+    transition: transform 0.15s ease;
+  }
+}
+
+.cursor-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate3d(calc(var(--cursor-x) - 140px), calc(var(--cursor-y) - 140px), 0);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25), transparent 65%);
+  filter: blur(8px);
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+
+.typing-caret {
+  display: inline-block;
+  margin-left: 6px;
+  width: 10px;
+  height: 20px;
+  background: #8b5cf6;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
