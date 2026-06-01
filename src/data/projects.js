@@ -61,7 +61,7 @@ export const projects = [
       'Responsive layout for optimal viewing on all devices',
     ],
     links: {
-      demo: 'https://your-portfolio.site',
+      demo: 'https://personal-portofolio-amber.vercel.app/',
       github: 'https://github.com/Adhima243/personal-portfolio',
     },
   }
