@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Instagram, Linkedin, Mail } from 'lucide-react'
+import { Github, Instagram, Linkedin, Mail, MessageCircle } from 'lucide-react'
 import heroImg from '../../assets/Profile.jpeg'
 import Card from '../ui/Card'
 import Button from '../ui/Button'
@@ -64,7 +64,7 @@ const Hero = () => {
               <div className="flex flex-wrap items-center gap-3 text-white/70">
                 {[
                   { icon: Github, href: 'https://github.com/Adhima243' },
-                  { icon: Whatsapp, href: 'https://wa.me/6281237149464' },
+                  { icon: MessageCircle, href: 'https://wa.me/6281237149464' },
                   { icon: Instagram, href: 'https://instagram.com/_jannn.__' },
                   { icon: Mail, href: 'mailto:cahyoashofar@gmail.com' },
                 ].map((item, index) => (
