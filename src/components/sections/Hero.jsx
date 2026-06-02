@@ -47,7 +47,7 @@ const Hero = () => {
                 />
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.4em] text-white/50">Ahmad Fauzan</p>
+                <p className="text-sm uppercase tracking-[0.4em] text-white/50">Ahmad Fauzan Adhima</p>
                 <h1 className="mt-3 text-3xl font-semibold">Frontend Developer</h1>
                 <p className="mt-2 text-white/60">Bali, Indonesia</p>
               </div>
