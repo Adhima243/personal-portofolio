@@ -24,7 +24,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section id="hero" className="section-wrap pt-32">
+    <section id="hero" className="section-wrap pt-28 sm:pt-32">
       <GlowBackground />
       <div className="container-wide relative z-10 grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
         <motion.div
@@ -33,8 +33,8 @@ const Hero = () => {
           animate="show"
           className="relative"
         >
-          <Card className="relative overflow-hidden p-8">
-            <div className="absolute right-6 top-6 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/60">
+          <Card className="relative overflow-hidden p-6 sm:p-8">
+            <div className="absolute right-4 top-4 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/60 sm:right-6 sm:top-6">
               Open for Work
             </div>
             <div className="flex flex-col items-start gap-6">
@@ -43,7 +43,7 @@ const Hero = () => {
                 <img
                   src={heroImg}
                   alt="Fauzan portrait"
-                  className="relative h-48 w-48 rounded-[32px] object-cover"
+                  className="relative h-40 w-40 rounded-[32px] object-cover sm:h-48 sm:w-48"
                 />
               </div>
               <div>
@@ -61,7 +61,7 @@ const Hero = () => {
                   <span className="text-white">Available for Projects</span>
                 </div>
               </div>
-              <div className="flex items-center gap-4 text-white/70">
+              <div className="flex flex-wrap items-center gap-3 text-white/70">
                 {[
                   { icon: Github, href: 'https://github.com' },
                   { icon: Linkedin, href: 'https://linkedin.com' },
@@ -80,7 +80,7 @@ const Hero = () => {
             </div>
           </Card>
 
-          <div className="absolute -bottom-8 left-10 flex gap-3">
+          <div className="relative mt-6 flex flex-wrap gap-2 sm:absolute sm:-bottom-8 sm:left-10">
             {['React.js', 'Tailwind', 'UI Design', 'Open to Work'].map((badge) => (
               <span key={badge} className="badge">
                 {badge}
@@ -98,7 +98,7 @@ const Hero = () => {
         >
           <p className="section-title">Digital Identity Portfolio</p>
           <div className="space-y-4">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-semibold leading-tight">
               Crafting <span className="text-gradient">modern</span> and elegant
               digital experiences.
             </h2>
@@ -107,17 +107,19 @@ const Hero = () => {
               performance, interaction, and clean design.
             </p>
           </div>
-          <div className="flex items-center gap-3 text-white/80">
+          <div className="flex flex-wrap items-center gap-3 text-white/80">
             <span className="text-lg font-semibold">{roles[roleIndex]}</span>
             <span className="typing-caret" aria-hidden="true" />
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button href="#projects">View Projects</Button>
-            <Button href="#contact" variant="ghost">
+            <Button href="#projects" className="w-full sm:w-auto">
+              View Projects
+            </Button>
+            <Button href="#contact" variant="ghost" className="w-full sm:w-auto">
               Download CV
             </Button>
           </div>
-          <div className="grid grid-cols-3 gap-6 pt-6 text-sm text-white/60">
+          <div className="grid grid-cols-1 gap-4 pt-6 text-sm text-white/60 sm:grid-cols-3">
             <div>
               <p className="text-2xl font-semibold text-white">10+</p>
               <p>Projects built</p>

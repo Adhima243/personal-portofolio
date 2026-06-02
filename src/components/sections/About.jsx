@@ -32,7 +32,7 @@ const About = () => {
                 scrolling, subtle motion, and strong typography. I love combining
                 engineering with visual storytelling.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                   <p className="text-2xl font-semibold text-white">10+</p>
                   <p>Projects shipped</p>

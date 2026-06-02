@@ -19,14 +19,14 @@ const Navbar = () => {
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-6 z-50">
+    <header className="fixed inset-x-0 top-3 z-50 sm:top-6">
       <div className="container-wide">
         <nav
-          className={`flex items-center justify-between rounded-full px-6 py-3 transition-all ${
+          className={`flex flex-wrap items-center justify-between gap-3 rounded-full px-4 py-3 transition-all sm:px-6 ${
             scrolled ? 'nav-blur shadow-soft' : 'border border-white/10 bg-white/5'
           }`}
         >
-          <a href="#hero" className="text-lg font-semibold tracking-[0.2em]">
+          <a href="#hero" className="text-base font-semibold tracking-[0.2em] sm:text-lg">
             FAUZAN.
           </a>
           <div className="hidden items-center gap-8 text-sm text-white/70 lg:flex">
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
           <a
             href="#contact"
-            className="rounded-full border border-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/80 transition-all hover:border-white/40"
+            className="rounded-full border border-white/15 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80 transition-all hover:border-white/40 sm:text-xs sm:tracking-[0.3em]"
           >
             Lets Talk
           </a>

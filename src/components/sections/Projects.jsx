@@ -44,7 +44,7 @@ const Projects = () => {
                     }`}
                   />
                   <div className="relative z-10 flex flex-1 flex-col gap-6">
-                    <div className="flex h-48 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 group-hover:scale-[1.02] group-hover:bg-white/10">
+                    <div className="flex h-40 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 group-hover:scale-[1.02] group-hover:bg-white/10 sm:h-48">
                       {project.img ? (
                         <img
                           src={project.img}
@@ -108,7 +108,7 @@ const Projects = () => {
       <AnimatePresence>
         {activeProject ? (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-6 py-10"
+            className="fixed inset-0 z-50 flex items-start justify-center bg-black/70 px-4 py-8 sm:items-center sm:px-6 sm:py-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -117,7 +117,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="max-h-[85vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/10 bg-[#111111] p-8 text-white shadow-soft"
+              className="max-h-[85vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/10 bg-[#111111] p-6 text-white shadow-soft sm:p-8"
             >
               <div className="flex items-start justify-between gap-6">
                 <div>

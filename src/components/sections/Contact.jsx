@@ -17,7 +17,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Card className="grid gap-8 p-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <Card className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr]">
             <form className="space-y-4">
               <input className="input-field" placeholder="Your name" />
               <input className="input-field" placeholder="Email address" />
