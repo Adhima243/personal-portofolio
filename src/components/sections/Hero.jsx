@@ -49,7 +49,7 @@ const Hero = () => {
               <div>
                 <p className="text-sm uppercase tracking-[0.4em] text-white/50">Ahmad Fauzan</p>
                 <h1 className="mt-3 text-3xl font-semibold">Frontend Developer</h1>
-                <p className="mt-2 text-white/60">Jakarta, Indonesia</p>
+                <p className="mt-2 text-white/60">Bali, Indonesia</p>
               </div>
               <div className="grid w-full gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
                 <div className="flex items-center justify-between">
@@ -63,10 +63,10 @@ const Hero = () => {
               </div>
               <div className="flex flex-wrap items-center gap-3 text-white/70">
                 {[
-                  { icon: Github, href: 'https://github.com' },
-                  { icon: Linkedin, href: 'https://linkedin.com' },
-                  { icon: Instagram, href: 'https://instagram.com' },
-                  { icon: Mail, href: 'mailto:hello@fauzan.dev' },
+                  { icon: Github, href: 'https://github.com/Adhima243' },
+                  { icon: Whatsapp, href: 'https://wa.me/6281237149464' },
+                  { icon: Instagram, href: 'https://instagram.com/_jannn.__' },
+                  { icon: Mail, href: 'mailto:cahyoashofar@gmail.com' },
                 ].map((item, index) => (
                   <a
                     key={`${item.href}-${index}`}
