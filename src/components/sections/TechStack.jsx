@@ -1,24 +1,41 @@
 import { motion } from 'framer-motion'
 import {
-  Atom,
-  Wind,
-  Braces,
-  Database,
-  Figma,
-  GitBranch,
-  Code2,
-} from 'lucide-react'
+  SiDart,
+  SiFigma,
+  SiFirebase,
+  SiFlutter,
+  SiFramer,
+  SiGit,
+  SiJavascript,
+  SiLaravel,
+  SiMysql,
+  SiNodedotjs,
+  SiOpenjdk,
+  SiPhp,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+} from 'react-icons/si'
 import SectionTitle from '../ui/SectionTitle'
 
 const stack = [
-  { name: 'React', icon: Atom },
-  { name: 'Tailwind', icon: Wind },
-  { name: 'JavaScript', icon: Braces },
-  { name: 'PHP', icon: Code2 },
-  { name: 'PostgreSQL', icon: Database },
-  { name: 'Figma', icon: Figma },
-  { name: 'Git', icon: GitBranch },
-  { name: 'MySQL', icon: Database },
+  { name: 'React', icon: SiReact },
+  { name: 'Tailwind', icon: SiTailwindcss },
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'PHP', icon: SiPhp },
+  { name: 'PostgreSQL', icon: SiPostgresql },
+  { name: 'Figma', icon: SiFigma },
+  { name: 'Git', icon: SiGit },
+  { name: 'MySQL', icon: SiMysql },
+  { name: 'Laravel', icon: SiLaravel },
+  { name: 'Flutter', icon: SiFlutter },
+  { name: 'Dart', icon: SiDart },
+  { name: 'Firebase', icon: SiFirebase },
+  { name: 'Framer Motion', icon: SiFramer },
+  { name: 'Python', icon: SiPython },
+  { name: 'Java', icon: SiOpenjdk },
+  { name: 'Node.js', icon: SiNodedotjs },
 ]
 
 const TechStack = () => {
@@ -39,7 +56,7 @@ const TechStack = () => {
               viewport={{ once: true }}
               className="stack-item group"
             >
-              <item.icon size={28} className="text-white/70" />
+              <item.icon className="h-8 w-8 text-white/70 transition duration-300 group-hover:text-white" />
               <p className="text-sm text-white/70 group-hover:text-white">
                 {item.name}
               </p>
